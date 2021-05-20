@@ -18,7 +18,7 @@ class Members1(BasePage):
         locator.click()
         sleep(2)
         self.find(By.XPATH,'// *[@id="username"]').send_keys('xx7')
-        sleep(2)
+        sleep(3)
         self.find(By.XPATH,'//*[@id="memberAdd_acctid"]').send_keys('4446')
         sleep(2)
         self.find(By.XPATH,'//*[@id="memberAdd_phone"]').send_keys('11111111118')
