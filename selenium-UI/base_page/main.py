@@ -1,12 +1,6 @@
 from time import sleep
 
-from selenium.webdriver.common.by import By
-
-from Web.UI.base_page.basepage import BasePage
-from Web.UI.page.book_address_page.book_address_fouction import Book_Address_Function
-from Web.UI.page.home_page.home_function import Home_Function
-from Web.UI.page.home_page.home_search_ui import Home_Search_UI
-
+from basepage import BasePage
 
 
 class Main(BasePage):

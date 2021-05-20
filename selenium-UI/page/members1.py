@@ -1,8 +1,9 @@
 from time import sleep
 
+from basepage import BasePage
 from selenium.webdriver.common.by import By
 
-from Web.study03.selenium_wework_main1.page1.base_page import BasePage
+
 
 from selenium.webdriver.support import expected_conditions
 from selenium.webdriver.support.wait import WebDriverWait

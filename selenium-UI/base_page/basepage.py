@@ -3,7 +3,6 @@ from time import sleep
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.chrome.webdriver import WebDriver
-from selenium.webdriver.common.by import By
 from selenium.webdriver.support import expected_conditions
 from selenium.webdriver.support.wait import WebDriverWait
 
@@ -18,7 +17,7 @@ class BasePage:
         #传人默认参数，在调用self.main=Main()时，就可以不传入参数了(或者直接在调用时传入默认参数初始值self.main=Main(WebDriver = None))
         #且不指定浏览器驱动类型时，后面调用时定位元素会出问题
         if driver is None:   #如果外面没有对driver进行传值（即第一次调用），那么就对driver进行初始化
-            options = Options()
+            options = Options() #使用 selenium 时，我们可能需要对 chrome 做一些特殊的设置，以完成我们期望的浏览器行为，比如阻止图片加载，阻止JavaScript执行 等动作。这些需要 selenium的 ChromeOptions 来帮助我们完成
             options.debugger_address = '127.0.0.1:9500'  #开启浏览器调试模式：cmd命令窗口输入： chrome  --remote-debugging-port=端口1（随便取），回车
             self._driver = webdriver.Chrome(options=options)
             sleep(2)
